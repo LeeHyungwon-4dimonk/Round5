@@ -15,7 +15,7 @@
 * 구성원(깃 아이디) 담당
   - 엄신원(HugeChamChi) : 캐릭터 + 네트워크 담당
   - 송덕원(Rio-Song-kr) : 이펙트 시스템
-  - 이형원(LeeHyungwon-4dimonk) : 배경 + 로프시스템
+  - 이형원(LeeHyungwon-4dimonk) : 맵 및 물리 시스템 + 로프시스템
   - 김동진(GBron) : 이펙트 시스템
   - 조기훈(PHSTD) : 무기 시스템
   - 권용호(YongHo-FOG) : 카드 시스템
