@@ -1,76 +1,115 @@
-========================================================================
+# Round5
+2D 로그라이크 슈팅 게임으로, 싱글 플레이와 1 대 1 멀티 플레이 대전 기능을 중심으로 시스템을 설계하였습니다.
 
+This repository is a **fork of the original team project**, reorganized for portfolio purposes.
 
-* 프로젝트 이름 
-
-  Round5
-
-
-========================================================================
-
-* 게임 컨셉
-  1. 장르: 2D Action RougeLike ShootingGame
-  2. 참고하는 모델: Rounds
-
-* 구성원(깃 아이디) 담당
-  - 엄신원(HugeChamChi) : 캐릭터 + 네트워크 담당
-  - 송덕원(Rio-Song-kr) : 이펙트 시스템
-  - 이형원(LeeHyungwon-4dimonk) : 맵 및 물리 시스템 + 로프시스템
-  - 김동진(GBron) : 이펙트 시스템
-  - 조기훈(PHSTD) : 무기 시스템
-  - 권용호(YongHo-FOG) : 카드 시스템
-
-========================================================================
-
-* branch 추가 양식
-  1. branch를 추가할 때에는 이니셜_작업명
-     (Ex): USW_GameManager
-     
--------------------------------------------------------------------------
-
-* 커밋 작성 양식
-  1. 기본적으로 커밋 메시지는 아래의 7가지 규칙을 따른다.
-     - 제목과 본문을 빈 행으로 구분한다.
-     - 제목을 50글자 이내로 제한한다.
-     - 제목 끝에 마침표를 넣지 않는다.
-     - 제목은 명령문으로 사용하며 과거형을 사용하지 않는다.
-     - 제목은 한글로 작성한다.
-     - 본문의 각 행은 72글자 내로 제한한다.
-     - 본문은 어떻게 보다 무엇을 왜 개발하였는지 설명한다.
-
-  2. 커밋의 성격(타입)을 작성할 때에는 아래의 규칙을 따른다.
-     - 대괄호에 타입을 작성한다.
-     - 타입은 첫글자는 대문자 그 이후는 소문자로 작성한다.
-    
-     - 성격 표현 양식
-       - [Create]  : 새로운 파일 추가
-       - [Feat]    : 새로운 기능 추가, 기존의 기능을 요구 사항에 맞추어 수정
-       - [Fix]     : 기능에 대한 버그 수정
-       - [Build]   : 빌드 관련 수정
-       - [Chore]   : 그 외 기타 수정
-       - [Docs]    : 문서(주석) 수정
-       - [Style]   : 코드 스타일, 포맷팅에 대한 수정
-       - [Refactor]: 기능의 변화가 아닌 코드 리팩터링
-       - [Test]    : 테스트 코드 추가/수정
-       - [Release] : 버전 릴리즈
-       - [Imports] : 서브모듈 파일 추가/수정
-   
-      
-   (Ex): [Feat] 플레이어의 움직임 구현
-
-----------------------------------------------------------------------------
-      
-* 에셋의 추가
-  1. 에셋은 별도 레파지토리에서 관리한다.
- 
-----------------------------------------------------------------------------
-
-** 작업시 중요 사항 **
- - 항상 그날 마무리 작업을 하고 다시 머지 해주어야 한다.
- - 기록 내용으로 이해가 안가거나, 정보가 부족하면 소통을 통해 파악 후 보고.
-
-----------------------------------------------------------------------------
-
-시연 영상
+## 시연 영상
 
 https://github.com/user-attachments/assets/975d6508-e9fa-4a3d-9b15-f80440e76925
+
+</br>
+
+## 📌 Project Overview
+
+| 항목 | 내용 |
+|------|------|
+| **프로젝트 유형** | 팀 프로젝트 (클라 6인) |
+| **장르** | 2D Action Roguelike Shooting Game |
+| **엔진** | Unity |
+| **언어** | C# |
+| **개발 방식** | Git + Unity Collaborate, Photon PUN 네트워크 |
+| **진행 기간** | *2025-07-22 ~ 2025-08-11* |
+| **팀 규모** | *6명* |
+| **개인 역할** | 맵/물리 시스템, 로프 시스템, 랜덤 맵 생성 시스템 구현 |
+
+<br>
+
+## 🧑‍💻 Team & Roles
+
+| 이름 | 역할 |
+|------|------|
+| **엄신원 (HugeChamChi)** | 캐릭터 + 네트워크 담당 |
+| **송덕원 (Rio-Song-kr)** | 이펙트 시스템 |
+| **이형원 (LeeHyungwon-4dimonk)** | 맵/물리 시스템, 랜덤 맵 생성, 로프 시스템 |
+| **김동진 (GBron)** | 이펙트 시스템 |
+| **조기훈 (PHSTD)** | 무기 시스템 |
+| **권용호 (YongHo-FOG)** | 카드 시스템 | :contentReference[oaicite:0]{index=0}
+
+<br>
+
+## 🧑‍💻 My Contributions
+
+### 🎯 Gameplay & Core Systems
+- 온라인 대전용 맵 5종 디자인 및 구현
+- 오브젝트 물리 엔진 설계 및 Photon 기반 네트워크 동기화
+- 플레이어 360도 팔 회전 애니메이션 구현
+
+### 🎨 Visual & FX
+- DoTween을 활용한 맵 전환 및 UI 연출
+- 셰이더 & 포스트 프로세싱을 통한 캐릭터/맵 비주얼 작업
+
+### 🧱 Level & Environment Design
+- 전투 흐름을 고려한 맵 구조/지형 설계
+- 상호작용 오브젝트 및 레벨 기믹 제작
+
+<br>
+
+## 🛠 Tech Stack
+
+### ✔ Core
+- Unity (C#)
+- Photon Unity Networking (PUN) for multiplayer
+
+### ✔ Tools
+- Git / GitHub
+- Custom shaders & sprite tools
+
+</br>
+
+## 📁 My Code Overview
+
+하기 경로에 제가 직접 구현한 스크립트들이 정리되어 있습니다.
+
+Assets/LHW/Scripts/
+
+### 🔹 랜덤 맵 생성 및 이동 연출 시스템
+- RandomMapPresetCreator.cs
+- MapController.cs
+
+📂 Path: `Assets/LHW/Scripts/GameSystem/MapSystem/`
+
+### 🔹 Joint 기반 맵 오브젝트 물리 시스템 & 로프 시스템
+- BoxController.cs
+- RopeCreator.cs
+
+📂 Path: `Assets/LHW/Scripts/Map`
+
+📂 Path: `Assets/LHW/Scripts/Objects/Rope/RopeCreator/`
+
+### 🔹 DoTween 활용 UI 연출
+- IngameUIManager.cs
+- RoundOverPanelController.cs
+
+📂 Path: `Assets/LHW/Scripts/GameSystem/UI/`
+
+### 🔹 커스텀 셰이더
+- LeftCharacter.shadergraph
+- PlatformMaterialShader.shadergraph
+
+📂 Path: `Assets/LHW/Material/Character`
+
+📂 Path: `Assets/LHW/Material/Platform`
+
+### 🔹 Spline 활용 팔 애니메이션
+- CardSceneCharacterLeftArm.cs
+
+📂 Path: `Assets/LHW/Scripts/CardAnimation/`
+
+
+## 📦 How to Run
+
+1. Repository를 클론합니다.  
+2. Unity 2022.6 이상으로 프로젝트를 엽니다.  
+3. Photon App ID를 설정한 후 Play를 누르면 실행됩니다.
+
+* 회원가입을 진행하면 접속할 수 있으며, 별도의 이메일 인증 없이 이메일 형식만 지킨 테스트 이메일로 생성할 수 있습니다.
